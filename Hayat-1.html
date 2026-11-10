@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#171615">
+
+    <title>HER. | A Birthday Experience for Hayat</title>
+
+    <link rel="stylesheet" href="Hayat-1.css">
+</head>
+
+<body>
+
+    <!-- MUSIC -->
+    <audio id="birthdayMusic" loop>
+        <source src="IMG_0095.MP4" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" id="musicBtn">
+        ♫ MUSIC
+    </button>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="#home" class="logo">HER.</a>
+
+        <span class="nav-label">A SPECIAL EXPERIENCE</span>
+
+        <button class="menu-btn" id="menuBtn">
+            MENU +
+        </button>
+    </nav>
+
+    <!-- MENU -->
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="close-menu" id="closeMenu">✕</button>
+
+        <a href="#home">01 — Welcome</a>
+        <a href="#birthday">02 — Her Day</a>
+        <a href="#memories">03 — Memories</a>
+        <a href="#letter">04 — A Letter</a>
+        <a href="#surprise">05 — Surprise</a>
+    </div>
+
+    <main>
+
+        <!-- PAGE 01: WELCOME -->
+        <section class="section hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">A DAY MADE FOR SOMEONE EXTRAORDINARY</p>
+
+                <h1>
+                    Happy<br>
+                    <span>Birthday,</span><br>
+                    Hayat.
+                </h1>
+
+                <p class="hero-description">
+                    A little collection of beautiful moments,
+                    heartfelt words and unexpected surprises.
+                    Created especially for you.
+                </p>
+
+                <a href="#birthday" class="primary-btn">
+                    BEGIN YOUR EXPERIENCE →
+                </a>
+
+                <div class="hero-bottom">
+                    <span>MADE WITH LOVE</span>
+                    <span>SCROLL TO EXPLORE ↓</span>
+                </div>
+
+            </div>
+
+            <div class="hero-side-text">
+                A SPECIAL DAY · A BEAUTIFUL SOUL
+            </div>
+
+        </section>
+
+
+        <!-- PAGE 02: BIRTHDAY CAKE -->
+        <section class="section birthday-section" id="birthday">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">CHAPTER TWO · HER SPECIAL DAY</p>
+
+                <h2>Make a <i>Wish.</i></h2>
+
+                <p>
+                    Close your eyes, make a wish,
+                    and let your new chapter begin.
+                </p>
+
+            </div>
+
+            <div class="cake-container">
+
+                <div class="candle-area">
+
+                    <div class="flame" id="flame">✦</div>
+
+                    <div class="candle"></div>
+
+                </div>
+
+                <div class="cake-top"></div>
+                <div class="cake-middle"></div>
+                <div class="cake-bottom"></div>
+
+                <div class="cake-plate"></div>
+
+            </div>
+
+            <p class="candle-instruction" id="candleText">
+                TAP THE FLAME TO MAKE YOUR WISH
+            </p>
+
+            <button class="secondary-btn" id="blowBtn">
+                BLOW OUT THE CANDLE ✦
+            </button>
+
+            <p class="wish-message hidden" id="wishMessage">
+                May every beautiful wish find its way to you.
+            </p>
+
+            <a href="#memories" class="next-link">
+                NEXT CHAPTER ↓
+            </a>
+
+        </section>
+
+
+        <!-- PAGE 03: MEMORIES -->
+        <section class="section memories-section" id="memories">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">CHAPTER THREE · LITTLE MOMENTS</p>
+
+                <h2>The <i>Memories.</i></h2>
+
+                <p>
+                    Some moments deserve to stay forever.
+                </p>
+
+            </div>
+
+          
+<div class="gallery single-photo">
+
+    <div class="gallery-item">
+        <img
+            src="photo_2026-11-10_20-43-50.jpg"
+            alt="A beautiful portrait of Hayat"
+        >
+        <span>HAYAT — ONE OF A KIND ♡</span>
+    </div>
+
+</div>
+
+            </div>
+
+            <!-- IMAGE LIGHTBOX -->
+            <div class="lightbox hidden" id="lightbox">
+                <button id="closeLightbox">✕</button>
+                <img id="lightboxImage" src="" alt="Selected memory">
+            </div>
+
+            <a href="#letter" class="next-link">
+                CONTINUE ↓
+            </a>
+
+        </section>
+
+
+        <!-- PAGE 04: LETTER -->
+        <section class="section letter-section" id="letter">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">CHAPTER FOUR · WORDS FROM THE HEART</p>
+
+                <h2>A Letter <i>For You.</i></h2>
+
+                <p>
+                    Some things are too special to leave unsaid.
+                </p>
+
+            </div>
+
+            <div class="envelope" id="envelope">
+
+                <div class="envelope-back"></div>
+
+                <div class="letter-paper" id="letterPaper">
+
+                    <p class="letter-date">A LITTLE NOTE FOR HAYAT</p>
+
+                    <h3>Dear Hayat,</h3>
+
+                    <p>
+                        On your special day, I hope life gives you
+                        countless reasons to smile.
+
+                        May you always have the courage to chase
+                        your dreams, the strength to overcome
+                        every challenge, and the peace you deserve.
+
+                        Never forget how special you are.
+                        The world is brighter with you in it.
+
+                    </p>
+
+                    <h3 class="letter-signature">
+                        With love, ♡
+                    </h3>
+
+                </div>
+
+                <div class="envelope-front"></div>
+
+            </div>
+
+            <button class="secondary-btn" id="openLetterBtn">
+                OPEN YOUR LETTER ✦
+            </button>
+
+            <a href="#surprise" class="next-link">
+                ONE LAST THING ↓
+            </a>
+
+        </section>
+
+
+        <!-- PAGE 05: FINAL SURPRISE -->
+        <section class="section surprise-section" id="surprise">
+
+            <div class="surprise-content">
+
+                <p class="eyebrow">THE FINAL CHAPTER</p>
+
+                <h2>
+                    Just for<br>
+                    <i>Hayat.</i>
+                </h2>
+
+                <p>
+                    Every beautiful story deserves
+                    a little extra magic.
+                </p>
+
+                <button class="primary-btn" id="surpriseBtn">
+                    REVEAL YOUR SURPRISE ✦
+                </button>
+
+                <div class="final-message hidden" id="finalMessage">
+
+                    <span class="final-star">✦</span>
+
+                    <h3>You are one of a kind.</h3>
+
+                    <p>
+                        May this year bring you closer to everything
+                        your heart has been dreaming of.
+
+                        Keep shining, keep growing,
+                        and never stop being YOU.
+
+                        Happy Birthday, Hayat. ♡
+                    </p>
+
+                    <span class="final-signature">
+                        WITH LOVE, ALWAYS.
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="footer">
+                HER. — CREATED ESPECIALLY FOR HAYAT
+                <br>
+                <span>AN UNFORGETTABLE DAY.</span>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="Hayat-1.js"></script>
+
+</body>
+</html>

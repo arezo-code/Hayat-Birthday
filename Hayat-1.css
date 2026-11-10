@@ -1,0 +1,716 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+    --black: #171615;
+    --cream: #F5F0E8;
+    --white: #FFFFFF;
+    --brown: #A58A70;
+    --muted: #8C8175;
+    --serif: 'Playfair Display', serif;
+    --sans: 'DM Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: var(--sans);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.section {
+    min-height: 100vh;
+    position: relative;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--serif);
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.nav-label,
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--brown);
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    border: 1px solid var(--black);
+    background: var(--black);
+    color: var(--cream);
+    padding: 17px 30px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: .4s;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    background: transparent;
+    color: var(--black);
+    transform: translateY(-4px);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--black);
+}
+
+.hero {
+    background: var(--black);
+    color: var(--cream);
+}
+
+.hero h1,
+.section-heading h2,
+.surprise-content h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(60px, 10vw, 125px);
+    line-height: 1.12;
+    margin: 25px 0;
+}
+
+.hero h1 span,
+.section-heading h2 i,
+.surprise-content h2 i {
+    color: var(--brown);
+    font-weight: 400;
+}
+
+.hero-description {
+    max-width: 440px;
+    margin: 25px auto 35px;
+    color: #B7ADA1;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.hero .primary-btn,
+.surprise-section .primary-btn {
+    background: var(--cream);
+    color: var(--black);
+    border-color: var(--cream);
+}
+
+.hero .primary-btn:hover,
+.surprise-section .primary-btn:hover {
+    background: transparent;
+    color: var(--cream);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 35px;
+    width: 84%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #95897B;
+}
+
+.hero-side-text {
+    position: absolute;
+    right: 25px;
+    top: 45%;
+    writing-mode: vertical-rl;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #95897B;
+}
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: clamp(45px, 7vw, 80px);
+}
+
+.section-heading p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* CAKE */
+
+.cake-container {
+    position: relative;
+    width: 240px;
+    margin: 35px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cake-top {
+    width: 160px;
+    height: 45px;
+    border-radius: 50%;
+    background: #E7D9C7;
+    z-index: 2;
+}
+
+.cake-middle {
+    width: 160px;
+    height: 45px;
+    background: #A58A70;
+    margin-top: -20px;
+    z-index: 1;
+}
+
+.cake-bottom {
+    width: 200px;
+    height: 65px;
+    background: #E7D9C7;
+    border-radius: 0 0 20px 20px;
+    margin-top: -2px;
+}
+
+.cake-plate {
+    width: 240px;
+    height: 12px;
+    background: #B5A28F;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+
+.candle-area {
+    position: absolute;
+    top: -80px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.candle {
+    width: 9px;
+    height: 45px;
+    background: var(--brown);
+}
+
+.flame {
+    color: #B78B50;
+    font-size: 32px;
+    cursor: pointer;
+    animation: flicker .7s infinite alternate;
+}
+
+@keyframes flicker {
+    from { transform: scale(1); opacity: .8; }
+    to { transform: scale(1.2); opacity: 1; }
+}
+
+.candle-instruction {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin: 25px 0;
+}
+
+.wish-message {
+    margin: 25px;
+    color: var(--brown);
+    font-family: var(--serif);
+    font-size: 20px;
+}
+
+/* GALLERY */
+
+
+/* LUXURY PORTRAIT DESIGN */
+
+.gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px 15px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 390px;
+    max-width: 90%;
+    text-align: center;
+    isolation: isolate;
+}
+
+/* Soft background glow */
+.gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: 30px -45px;
+    background: url("assets/images/hayat.jpg") center / cover no-repeat;
+    filter: blur(65px);
+    opacity: 0.55;
+    z-index: -1;
+}
+
+/* Main photo */
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.18),
+        0 5px 15px rgba(0, 0, 0, 0.08);
+    filter: none;
+    transition: transform .5s ease, box-shadow .5s ease;
+    cursor: pointer;
+}
+
+.gallery-item img:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
+}
+
+/* Caption */
+.gallery-item span {
+    display: block;
+    margin-top: 18px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--brown);
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .gallery-item {
+        width: 320px;
+    }
+
+    .gallery-item img {
+        height: 440px;
+    }
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    filter: grayscale(45%);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.gallery-item img:hover {
+    filter: grayscale(0);
+    transform: translateY(-7px);
+}
+
+.gallery-item span {
+    display: block;
+    margin-top: 12px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--muted);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    background: #171615f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+.lightbox button {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 28px;
+}
+
+/* LETTER */
+
+.envelope {
+    position: relative;
+    width: min(500px, 90vw);
+    height: 300px;
+    background: #D9C9B5;
+    margin: 40px auto;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #B49A7A;
+}
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #C7B39B, #E1D1BC);
+    clip-path: polygon(0 0, 50% 55%, 100% 0, 100% 100%, 0 100%);
+    z-index: 3;
+}
+
+.letter-paper {
+    position: absolute;
+    width: 90%;
+    height: 250px;
+    left: 5%;
+    top: 20px;
+    padding: 25px;
+    background: #FFFCF5;
+    text-align: left;
+    line-height: 1.8;
+    overflow: auto;
+    transition: transform .8s ease;
+    z-index: 2;
+}
+
+.letter-paper h3 {
+    font-family: var(--serif);
+    margin: 12px 0;
+    font-weight: 400;
+}
+
+.letter-paper p {
+    font-size: 12px;
+    color: #6E6256;
+}
+
+.letter-date,
+.letter-signature {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.envelope.open .letter-paper {
+    transform: translateY(-180px);
+    z-index: 4;
+}
+
+.next-link {
+    margin-top: 50px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--brown);
+}
+
+/* FINAL SURPRISE */
+
+.surprise-section {
+    background: var(--black);
+    color: var(--cream);
+}
+
+.surprise-content {
+    max-width: 650px;
+}
+
+.surprise-content .eyebrow {
+    color: var(--brown);
+}
+
+.surprise-content > p:not(.eyebrow) {
+    color: #B7ADA1;
+    line-height: 2;
+    margin: 20px 0 35px;
+}
+
+.final-message {
+    max-width: 500px;
+    margin: 45px auto 0;
+    padding: 30px;
+    border: 1px solid #796650;
+    animation: reveal 1s ease;
+}
+
+.final-message h3 {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 400;
+    margin: 20px;
+}
+
+.final-message p {
+    color: #B7ADA1;
+    line-height: 2;
+    font-size: 13px;
+}
+
+.final-star {
+    color: var(--brown);
+    font-size: 30px;
+}
+
+.final-signature {
+    display: block;
+    margin-top: 25px;
+    color: var(--brown);
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MENU */
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--black);
+    color: var(--cream);
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-overlay a {
+    font-family: var(--serif);
+    font-size: clamp(25px, 5vw, 45px);
+    transition: .3s;
+}
+
+.menu-overlay a:hover {
+    color: var(--brown);
+}
+
+.close-menu {
+    position: absolute;
+    top: 30px;
+    right: 8%;
+    background: none;
+    border: none;
+    color: var(--cream);
+    font-size: 25px;
+}
+
+/* MUSIC & FOOTER */
+
+.music-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 150;
+    background: var(--black);
+    color: var(--cream);
+    border: 1px solid var(--brown);
+    padding: 12px 18px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 2px;
+    line-height: 2.5;
+    color: #95897B;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .section {
+        padding: 100px 6%;
+    }
+
+    .nav-label {
+        display: none;
+    }
+
+    .hero-side-text {
+        display: none;
+    }
+
+    .hero-bottom {
+        width: 88%;
+        font-size: 8px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+
+    .letter-paper {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .gallery-item img {
+        height: 155px;
+    }
+
+    .section-heading h2 {
+        font-size: 43px;
+    }
+
+    .envelope {
+        height: 280px;
+    }
+
+    .final-message {
+        padding: 20px;
+    }
+
+    .music-btn {
+        bottom: 15px;
+        right: 15px;
+    }
+
+
+/* BEAUTIFUL CENTERED PHOTO */
+
+.single-photo {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 70px auto !important;
+    padding: 40px 20px !important;
+    overflow: visible !important;
+}
+
+.single-photo .gallery-item {
+    position: relative;
+    width: 430px !important;
+    max-width: 90vw !important;
+    margin: 0 auto !important;
+    overflow: visible !important;
+    isolation: isolate;
+}
+
+/* Soft blur around all four sides */
+.single-photo .gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: 15px -35px;
+    background: url("assets/images/hayat.jpg") center / cover no-repeat;
+    filter: blur(55px);
+    opacity: 0.65;
+    z-index: -1;
+}
+
+/* Main portrait */
+.single-photo .gallery-item img {
+    display: block;
+    width: 100% !important;
+    height: 560px !important;
+    object-fit: cover;
+    object-position: center;
+    border: 7px solid #fff;
+    box-shadow: 0 20px 60px rgba(23, 22, 21, 0.15);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .single-photo .gallery-item {
+        width: 340px !important;
+    }
+
+    .single-photo .gallery-item img {
+        height: 460px !important;
+    }
+}
+
+}
